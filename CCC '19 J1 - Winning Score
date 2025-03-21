@@ -1,0 +1,16 @@
+Athree=int(input())*3
+Atwo=int(input())*2
+Aone=int(input())
+Bthree=int(input())*3
+Btwo=int(input())*2
+Bone=int(input())
+
+ScoreA=(Athree+Atwo+Aone)
+ScoreB=(Bthree+Btwo+Bone)
+
+if (ScoreA)>(ScoreB):
+    print('A')
+elif (ScoreA)<(ScoreB):
+    print('B')
+else:
+    print('T')
