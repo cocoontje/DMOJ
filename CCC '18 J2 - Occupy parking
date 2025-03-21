@@ -1,0 +1,22 @@
+space = int(input())
+yesterday = input()
+today = input()
+count = 0
+
+for location in range(len(yesterday)):
+  if yesterday[location] == 'C' and today[location] == 'C':
+    count = count + 1
+    
+print(count)
+
+#second option
+n = int(input())
+yesterday = input()
+today = input()
+count = 0
+
+for loc in range(n):
+  if yesterday[loc] == 'C' and today[loc] == 'C':
+    count = count + 1
+    
+print(count)
