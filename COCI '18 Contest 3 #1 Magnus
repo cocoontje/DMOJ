@@ -1,0 +1,30 @@
+text = input()
+count = 0
+checker = 0
+H = False
+O = False
+N = False
+I = False
+
+for char in text:
+  if 'H' == char and not H:
+    H = True
+    checker = checker + 1
+  elif 'O' == char and not O and H:
+    O = True
+    checker = checker + 1
+  elif 'N' == char and not N and O:
+    N = True
+    checker = checker + 1
+  elif 'I' == char and not I and N:
+    I = True
+    checker = checker + 1
+  if checker == 4:
+    count = count + 1
+    checker = 0
+    H = False
+    O = False
+    N = False
+    I = False
+
+print(count)
