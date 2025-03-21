@@ -34,3 +34,33 @@ elif am == cm:
     print('A-mol')
   if letter[len(tone)-1] == 'C':
     print('C-dur')
+
+#another version
+press = input()
+accented = ''
+seen = True
+am = 0
+cm = 0
+
+for letter in press:
+  if letter == '|' and not seen:
+    seen = True
+  if letter != '|' and seen:
+    accented = accented + letter
+    seen = False
+
+for tone in accented:
+  if tone == 'A' or tone == 'D' or tone == 'E':
+    am += 1
+  elif tone == 'C' or tone == 'F' or tone == 'G':
+    cm += 1
+    
+if am < cm:
+  print('C-dur')
+elif am > cm:
+  print('A-mol')
+elif am == cm:
+  if letter[len(tone)-1] == 'A':
+    print('A-mol')
+  if letter[len(tone)-1] == 'C':
+    print('C-dur')
