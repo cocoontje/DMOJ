@@ -1,0 +1,20 @@
+password = input().strip()
+num_count = 0
+cap_count = 0
+low_count = 0
+
+for char in password:
+    if char.isupper():
+        cap_count = cap_count + 1
+    elif char.islower():
+        low_count = low_count + 1
+    elif char.isdigit():
+        num_count = num_count + 1
+
+if (len(password) <= 12 and len(password) >=8 and
+cap_count >= 2 and
+low_count >= 3 and
+num_count >= 1):
+    print('Valid')
+else:
+    print('Invalid')
