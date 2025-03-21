@@ -1,0 +1,52 @@
+lines = int(input())
+e_count = 0
+f_count = 0
+
+for text in range(lines):
+  p = input()
+  for letter in range(len(p)):
+    if p[letter] == 's':
+      f_count = f_count + 1
+    elif p[letter] == 'S':
+      f_count = f_count + 1
+    elif p[letter] == 't':
+      e_count = e_count + 1
+    elif p[letter] == 'T':
+      e_count = e_count + 1
+  
+if f_count > e_count:
+  print('French')
+elif e_count > f_count:
+  print('English')
+elif e_count == f_count:
+  print('French')
+
+#second option
+lines = int(input())
+e_count = 0
+f_count = 0
+s_count = 0
+t_count = 0
+  
+for line in range(lines):
+  text = input()
+  for letter in range(len(text)):
+    if text[letter].lower() == 's':
+     s_count += 1
+    elif text[letter].lower() == 't':
+     t_count += 1
+  
+if s_count > t_count:
+  f_count += 1
+elif t_count > s_count:
+  e_count += 1
+elif s_count == t_count:
+  f_count += 1
+  
+
+if e_count > f_count:
+    print('English')
+elif e_count < f_count:
+    print('French')
+else:
+    print('French')
