@@ -1,0 +1,9 @@
+X = int(input()) #monthly Mb
+N = int(input()) #duration (how many months)
+new = 0
+
+for mb in range(N):
+  P = int(input()) #monthly use
+  new = (new - P + X) #new Mb next month
+  
+print(new + X)
