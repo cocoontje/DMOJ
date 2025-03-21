@@ -1,0 +1,18 @@
+num = int(input())
+answers = ''
+corrects = ''
+count = 0
+
+for a in range(num):
+    answer = input()
+    answers = answers + answer
+
+for c in range(num):
+    correct = input()
+    corrects = corrects + correct
+
+for check in range(len(answers)):
+    if answers[check] == corrects[check]:
+        count += 1
+        
+print(count)
